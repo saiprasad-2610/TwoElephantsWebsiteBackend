@@ -98,8 +98,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ✅ CORS - Allow your Vercel frontend
 CORS_ALLOWED_ORIGINS = [
-    "https://two-elephants-website-df4xg5qa3-sais-projects-14551cbf.vercel.app/",   # ← Replace with your actual Vercel URL
-    "https://two-elephants-website-ejxd.vercel.app/",
+    "https://two-elephants-website-df4xg5qa3-sais-projects-14551cbf.vercel.app",   # ← Replace with your actual Vercel URL
+    "https://two-elephants-website-ejxd.vercel.app",
     "http://localhost:3000",
     "http://localhost:5173",              # ← If using Vite
 ]
