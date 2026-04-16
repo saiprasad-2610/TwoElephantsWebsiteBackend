@@ -104,7 +104,3 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CORS_ALLOW_CREDENTIALS = True
 
-from django.contrib.auth.models import User
-
-if not User.objects.filter(username='admin').exists():
-    User.objects.create_superuser('admin', 'admin@gmail.com', 'admin123')
