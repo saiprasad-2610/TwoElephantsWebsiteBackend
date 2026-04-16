@@ -65,13 +65,9 @@ WSGI_APPLICATION = 'wsgi.application'
 # ✅ Database - uses DATABASE_URL env var on Render, falls back to local MySQL
 DATABASES = {
     'default': dj_database_url.config(
-        default=config(
-            'DATABASE_URL',
-            default='mysql://root:26102004@localhost:3306/twoelephants_db'
-        )
+        default=os.environ.get('DATABASE_URL')
     )
 }
-
 # ✅ Add charset separately
 DATABASES['default']['OPTIONS'] = {
     'charset': 'utf8mb4',
