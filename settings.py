@@ -96,12 +96,19 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ✅ CORS - Allow your Vercel frontend
+# ✅ CORS - Allow your Vercel frontend and admin panel
 CORS_ALLOWED_ORIGINS = [
-    "https://two-elephants-website-df4xg5qa3-sais-projects-14551cbf.vercel.app",   # ← Replace with your actual Vercel URL
-    "https://two-elephants-website-ejxd.vercel.app",
-    "http://localhost:3000",
-    "http://localhost:5173",              # ← If using Vite
+    "https://two-elephants-website-df4xg5qa3-sais-projects-14551cbf.vercel.app",   # Main frontend
+    "https://two-elephants-website-ejxd.vercel.app",                              # Frontend alternative
+    "https://two-elephants-admin-panel.vercel.app",                               # Admin panel (update with actual URL)
+    "https://two-elephants-admin-df4xg5qa3-sais-projects-14551cbf.vercel.app",    # Admin panel alternative
+    "http://localhost:3000",                                                      # React dev server
+    "http://localhost:5173",                                                       # Vite dev server
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173",
 ]
-CORS_ALLOW_CREDENTIALS = True
 
+# For development, allow all origins (remove in production)
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
